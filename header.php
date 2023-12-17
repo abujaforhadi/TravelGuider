@@ -47,12 +47,9 @@ $user_data = check_login($con);
     <header id="header">
         <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
             <p class="font-rale font-size-12 text-black-50 m-0">
-                <marquee behavior="" direction="" style="color: red;">Welcome to Travel Guider</marquee>
+                <marquee behavior="" direction="" style="color: red;">Welcome <?php echo $user_data['user_name']; ?> to Travel Guider</marquee>
             </p>
-            <div class="font-rale font-size-14">
-                <a href="login.php" class="px-3 border-right border-left text-dark"><a href="logout.php"><i class="fa-solid fa-user"></i><?php echo $user_data['user_name']; ?> (Logout)</a></a>
             
-            </div>
         </div>
 
         <!-- Primary Navigation -->
@@ -79,7 +76,8 @@ $user_data = check_login($con);
                         <a class="nav-link" href="#"><i class="fa-solid fa-hotel"></i> Residence</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./demo/login.html"><i class="fa-solid fa-user-plus"></i> </a>
+                        
+                        <a class="nav-link" href="logout.php"><i class="fa-solid fa-user-plus"></i><?php echo $user_data['user_name']; ?> (Logout)</a></a>
                     </li>
                     
                 </ul>

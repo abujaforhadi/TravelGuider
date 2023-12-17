@@ -11,8 +11,8 @@ include("Template/_admin.php");
   #box1 {
     font-size: large;
 
-    background-color: darkblue;
-    color: aliceblue;
+    background-color: gray;
+    color: white;
     margin: auto;
     width: 300px;
     padding: 20px;
@@ -49,19 +49,19 @@ if($conn->query($sql)===true){
 
   <form method="post">
     <div style="font-size: 20px;margin: 10px;color: white;">Product</div>
-    Item ID <br>
+    Place ID <br>
     <input id="text" type="text" name="item_id" required><br>
-    Item Brand <br>
-    <input id="text" type="text" name="item_brand" requiredy><br>
-    Item Name<br>
-    <input id="text" type="text" name="item_name" requiredy><br>
-    Item Price<br>
-    <input id="text" type="number" name="item_price" requiredy><br>
-    Item Image<br>
-    <input id="text" type="text" name="item_image" requiredy><br>
+    Divisions <br>
+    <input id="text" type="text" name="item_brand" ><br>
+    Place Name<br>
+    <input id="text" type="text" name="item_name" ><br>
+    Price<br>
+    <input id="text" type="number" name="item_price" ><br>
+    Image<br>
+    <input id="text" type="text" name="item_image" ><br>
 
-    Item Register Date <br>
-    <input id="text" type="date" name="item_register" value="" requiredy><br>
+    Entry Date <br>
+    <input id="text" type="date" name="item_register" value="" ><br>
     <div class="btn">
       <a>
         <span></span>
@@ -96,12 +96,12 @@ if($conn->query($sql)===true){
 <div>
   <table border="1" cellspacing="1" cellpadding="10">
     <tr>
-      <th>item_id</th>
-      <th>item_brand</th>
-      <th>item_name</th>
-      <th>item_price</th>
-      <th>item_image</th>
-      <th>item_register</th>
+      <th>Place_id</th>
+      <th>Divisions</th>
+      <th>Place_name</th>
+      <th>Price</th>
+      <th>image</th>
+      <th>Entry Date</th>
 
     </tr>
 <?php
