@@ -7,7 +7,10 @@ include("database/functions.php");
 
 $user_data = check_login($con);
 
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,6 +74,9 @@ $user_data = check_login($con);
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><i class="fa-solid fa-house-medical-flag"></i> Medical</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-hotel"></i> Residence</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><i class="fa-solid fa-hotel"></i> Residence</a>

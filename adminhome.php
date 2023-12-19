@@ -60,7 +60,7 @@ if($conn->query($sql)===true){
     Image<br>
     <input id="text" type="text" name="item_image" ><br>
 
-    Entry Date <br>
+    Event Date <br>
     <input id="text" type="date" name="item_register" value="" ><br>
     <div class="btn">
       <a>
@@ -101,7 +101,7 @@ if($conn->query($sql)===true){
       <th>Place_name</th>
       <th>Price</th>
       <th>image</th>
-      <th>Entry Date</th>
+      <th>event Date</th>
 
     </tr>
 <?php
