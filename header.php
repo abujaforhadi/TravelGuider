@@ -50,7 +50,7 @@ $user_data = check_login($con);
     <header id="header">
         <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
             <p class="font-rale font-size-12 text-black-50 m-0">
-                <marquee behavior="" direction="" style="color: red;">Welcome <?php echo $user_data['user_name']; ?> to Travel Guider</marquee>
+                <marquee behavior="" direction="" style="color: green;">Welcome <?php echo $user_data['user_name']; ?> to Travel Guider</marquee>
             </p>
             
         </div>
