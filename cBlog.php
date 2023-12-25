@@ -47,7 +47,7 @@
   font-size: 30px;
 }
 
-#dateLabel
+#dateLabel,#name
 {
   font-family: "Segoe UI", sans-serif;
 
@@ -195,25 +195,24 @@ form
 
 <form action="blog_post_process.php" method="POST" enctype="multipart/form-data">
 
-  <input id="blogTitle" name="blogtitle" type="text" placeholder="Blog Title..." autocomplete="off">
+  <input id="blogTitle" name="blogtitle" type="text" placeholder="Blog Title..." autocomplete="off"required>
   
   <br>
   
-  <span id="dateLabel">Date: </span>
-  
-  <input id="blogDate" name="blogdate" readonly></input>
+  Travel Date:<input id="blogDate" name="blogdate" type="date"required></input> <br> <br>
+  UserName:<input id="name" type="name" name="name" required> </input> <br>
+
   
   <br><br>
   
-  <input type="file" name="uploadimage">
+  <input type="file" name="uploadimage" required>
   
   <br><br>
 
-  <textarea id="blogPara" name="blogpara" cols="75" rows="10" type="text" placeholder="Blog Paragraph..." autocomplete="off"></textarea>
+  <textarea id="blogPara" name="blogpara" cols="75" rows="10" type="text" placeholder="Blog Paragraph..." autocomplete="off" required></textarea>
 
   <br><br>
-  
-  <button id="saveBtn" type="submit">Save Post</button>
+  <button id="saveBtn" type="submit" required>Save Post</button>
 
 </form>
 

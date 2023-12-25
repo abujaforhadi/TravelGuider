@@ -14,7 +14,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog Using PHP And MySQL</title>
+ 
 
     <style type="text/css">
         body
@@ -210,7 +210,7 @@ form
 
       if($conn->connect_error) die("Connection Error" . $conn->connect_error);
 
-      $sql = "select topic_title, topic_date, image_filename, topic_para from blog_table;";
+      $sql = "select topic_title, topic_date,name, image_filename, topic_para from blog_table;";
 
       $result = $conn->query($sql);
 
@@ -223,6 +223,7 @@ form
           echo "<span id='displayTitle'>" . $row["topic_title"] . "</span><br>";
 
           echo "<span id='displayDate'>" . $row["topic_date"] . "</span><br><br>";
+          echo "<span id='displayTitle'>" . $row["name"] . "</span><br><br>";
 
           echo "<img style='width: 100%; height: auto' id='displayImage' src='./assets/blog/images/" . $row["image_filename"] . "'><br>"; 
 

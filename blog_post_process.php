@@ -4,16 +4,26 @@
     include ('header.php');
 ?>
 <?php
+ $servername = "localhost";
+
+ $username = "root";
+
+ $password = "";
+
+ $database = "shopee";
+
+ $conn = new mysqli($servername, $username, $password, $database);
 
 
 
 $blogTitle = $_POST["blogtitle"];
 
 $blogDate = $_POST["blogdate"];
+$Name=$_POST["name"]; 
 
 $blogPara = $_POST["blogpara"];
 
-// $sql = "insert into blog_table (topic_title, topic_date, image_filename, topic_para) values ('" . $blogTitle . "', '" . $blogDate . "', '" . $filename . "', '" . $blogPara . "');";
+
 
 
 $filename = "NONE";
@@ -24,10 +34,10 @@ if(isset($_FILES['uploadimage']))
   
   $tempname = $_FILES['uploadimage']['tmp_name'];
   
-  move_uploaded_file($tempname, "images/" . $GLOBALS['filename']);
+  move_uploaded_file($tempname, "./assets/blog/images/" . $GLOBALS['filename']);
 }
 
-$sql = "insert into blog_table (topic_title, topic_date, image_filename, topic_para) values ('" . $blogTitle . "', '" . $blogDate . "', '" . $filename . "', '" . $blogPara . "');";
+$sql = "INSERT INTO blog_table (topic_title, topic_date, name, image_filename,topic_para) values ('" . $blogTitle . "', '$blogDate','', '" . $filename . "', '" . $blogPara . "');";
 
 if($conn->query($sql) === TRUE)
 {
@@ -53,7 +63,7 @@ $conn->close();
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Post Saved</title>
+   
 
     <style type="text/css">
         body
@@ -148,8 +158,7 @@ form
   padding: 5px 5px;
 }
 
-#blogDate
-{
+#blogDate,#name{
   border: none;
 
   outline: none;
@@ -237,8 +246,9 @@ form
       <br>
 
       <span id="showDate"><?php echo $blogDate ?></span><br><br>
+      <span id="name"  name="name"><?php echo $Name ?></span><br><br>
 
-      <center><img src="images/<?php echo $filename; ?>" id="showImage" style="width: 50%; height: auto;"></center>
+      <center><img src="./assets/blog/images/<?php echo $filename; ?>" id="showImage" style="width: 50%; height: auto;"></center>
 
       <br>
 
