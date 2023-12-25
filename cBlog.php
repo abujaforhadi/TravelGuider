@@ -3,7 +3,6 @@
     // include header.php file
     include ('header.php');
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -14,9 +13,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog Using PHP And MySQL</title>
+   
 
-    <style type="text/css">
+       <style type="text/css">
         body
 {
   margin: 0;
@@ -187,65 +186,44 @@ form
   <body>
 
     <div class="top-bar">
-
-      <span id="topBarTitle">Blog | All Posts</span>
-
-    </div>
-
-    <br>
-
-    <div class="all-posts-container">
-
-      <?php
-
-      $servername = "localhost";
-
-      $username = "root";
-
-      $password = "";
-
-      $database = "shopee";
-
-      $conn = new mysqli($servername, $username, $password, $database);
-
-      if($conn->connect_error) die("Connection Error" . $conn->connect_error);
-
-      $sql = "select topic_title, topic_date, image_filename, topic_para from blog_table;";
-
-      $result = $conn->query($sql);
-
-      if($result->num_rows > 0)
-      {
-        while($row = $result->fetch_assoc())
-        {
-          echo "<div style='padding: 25px 25px;' class='post-container'>";
-
-          echo "<span id='displayTitle'>" . $row["topic_title"] . "</span><br>";
-
-          echo "<span id='displayDate'>" . $row["topic_date"] . "</span><br><br>";
-
-          echo "<img style='width: 100%; height: auto' id='displayImage' src='./assets/blog/images/" . $row["image_filename"] . "'><br>"; 
-
-          echo "<p style='overflow: hidden; display: -webkit-box; -webkit-line-clamp: 10; line-clamp: 10; -webkit-box-orient: vertical;' id='displayPara'>" . $row["topic_para"] . "</p><br>";
-          
-          echo "</div>";
-        }
-      }
-      
-      else
-      {
-        echo "<center><span>No Blog Posts Found</span></center>";
-      
-        // echo "<center><a style='color: dodgerblue;' href='index.html'>Write a New Post</a></center>";
-      }
-
-      $conn->close();
-      
-      ?>
+  
+      <span id="topBarTitle">Blog | New Post</span>
 
     </div>
 
-    <?php echo "<br><center><a style='color: dodgerblue; text-decoration: none; background: dodgerblue; padding: 5px 25px; color: #fff; border-radius: 50px;' href='cBlog.php'>Write a New Post</a></center><br>"; ?>
+    <div class="writing-section">
+
+<form action="blog_post_process.php" method="POST" enctype="multipart/form-data">
+
+  <input id="blogTitle" name="blogtitle" type="text" placeholder="Blog Title..." autocomplete="off">
+  
+  <br>
+  
+  <span id="dateLabel">Date: </span>
+  
+  <input id="blogDate" name="blogdate" readonly></input>
+  
+  <br><br>
+  
+  <input type="file" name="uploadimage">
+  
+  <br><br>
+
+  <textarea id="blogPara" name="blogpara" cols="75" rows="10" type="text" placeholder="Blog Paragraph..." autocomplete="off"></textarea>
+
+  <br><br>
+  
+  <button id="saveBtn" type="submit">Save Post</button>
+
+</form>
+
+<br>
+
+<center><a style="text-decoration: none;" href="index.php" id="saveBtn">Go to Home Page</a></center>
+
+</div>
+
+    <script src="scripts/script.js"></script>
 
   </body>
   

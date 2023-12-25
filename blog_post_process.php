@@ -3,18 +3,57 @@
     // include header.php file
     include ('header.php');
 ?>
+<?php
+
+
+
+$blogTitle = $_POST["blogtitle"];
+
+$blogDate = $_POST["blogdate"];
+
+$blogPara = $_POST["blogpara"];
+
+// $sql = "insert into blog_table (topic_title, topic_date, image_filename, topic_para) values ('" . $blogTitle . "', '" . $blogDate . "', '" . $filename . "', '" . $blogPara . "');";
+
+
+$filename = "NONE";
+
+if(isset($_FILES['uploadimage']))
+{
+  $GLOBALS['filename'] = $_FILES['uploadimage']['name'];
+  
+  $tempname = $_FILES['uploadimage']['tmp_name'];
+  
+  move_uploaded_file($tempname, "images/" . $GLOBALS['filename']);
+}
+
+$sql = "insert into blog_table (topic_title, topic_date, image_filename, topic_para) values ('" . $blogTitle . "', '" . $blogDate . "', '" . $filename . "', '" . $blogPara . "');";
+
+if($conn->query($sql) === TRUE)
+{
+  echo "";
+}
+
+else
+{
+  echo "Error Saving Post";
+}
+
+$conn->close();
+
+?>
 
 <!DOCTYPE html>
 
 <html lang="en">
-  
+
   <head>
 
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog Using PHP And MySQL</title>
+    <title>Post Saved</title>
 
     <style type="text/css">
         body
@@ -186,70 +225,33 @@ form
 
   <body>
 
-    <div class="top-bar">
+    <div class="container" style="width: 50%; margin: auto; text-align: justify; font-family: Roboto, sans-serif;">
 
-      <span id="topBarTitle">Blog | All Posts</span>
+      <h1 style="margin-bottom: 10px; text-align: center;">Post Saved</h1>
 
+      <center><a style="color: dodgerblue;" href="index.php">Go to Home Page</a></center>
+      
+      <br><br>
+
+      <?php echo "<span style='font-weight: bold;' id='showTitle'>" . $blogTitle . "</span>" ?>
+      <br>
+
+      <span id="showDate"><?php echo $blogDate ?></span><br><br>
+
+      <center><img src="images/<?php echo $filename; ?>" id="showImage" style="width: 50%; height: auto;"></center>
+
+      <br>
+
+      <?php echo "<span id='showPara'>" . $blogPara . "</span>" ?>
+
+      <br><br>
+      
     </div>
-
-    <br>
-
-    <div class="all-posts-container">
-
-      <?php
-
-      $servername = "localhost";
-
-      $username = "root";
-
-      $password = "";
-
-      $database = "shopee";
-
-      $conn = new mysqli($servername, $username, $password, $database);
-
-      if($conn->connect_error) die("Connection Error" . $conn->connect_error);
-
-      $sql = "select topic_title, topic_date, image_filename, topic_para from blog_table;";
-
-      $result = $conn->query($sql);
-
-      if($result->num_rows > 0)
-      {
-        while($row = $result->fetch_assoc())
-        {
-          echo "<div style='padding: 25px 25px;' class='post-container'>";
-
-          echo "<span id='displayTitle'>" . $row["topic_title"] . "</span><br>";
-
-          echo "<span id='displayDate'>" . $row["topic_date"] . "</span><br><br>";
-
-          echo "<img style='width: 100%; height: auto' id='displayImage' src='./assets/blog/images/" . $row["image_filename"] . "'><br>"; 
-
-          echo "<p style='overflow: hidden; display: -webkit-box; -webkit-line-clamp: 10; line-clamp: 10; -webkit-box-orient: vertical;' id='displayPara'>" . $row["topic_para"] . "</p><br>";
-          
-          echo "</div>";
-        }
-      }
-      
-      else
-      {
-        echo "<center><span>No Blog Posts Found</span></center>";
-      
-        // echo "<center><a style='color: dodgerblue;' href='index.html'>Write a New Post</a></center>";
-      }
-
-      $conn->close();
-      
-      ?>
-
-    </div>
-
-    <?php echo "<br><center><a style='color: dodgerblue; text-decoration: none; background: dodgerblue; padding: 5px 25px; color: #fff; border-radius: 50px;' href='cBlog.php'>Write a New Post</a></center><br>"; ?>
 
   </body>
   
 </html>
+
 <?php
 // include footer.php file
 include ('footer.php');
