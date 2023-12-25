@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto font-rubik">
                     <li class="nav-item active">
-                        <a class="nav-link" href=""><i class="fa-solid fa-location-dot"></i> Tour Places</a></a>
+                        <a class="nav-link" href="adminhome.php"><i class="fa-solid fa-location-dot"></i> Tour Places</a></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><i class="fa-solid fa-van-shuttle"></i>Transportation</a>

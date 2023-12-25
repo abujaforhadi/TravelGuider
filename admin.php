@@ -47,7 +47,7 @@ session_start();
 
 ?>
 <?php
-include("Template/_admin.php");
+include("_admin.php");
 
 ?>
 
