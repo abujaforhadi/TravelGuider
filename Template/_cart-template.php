@@ -87,7 +87,7 @@
                     <h6 class="font-size-12 font-rale text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
                     <div class="border-top py-4">
                         <h5 class="font-baloo font-size-20">Total  ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-danger">৳<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>
-                        <button type="submit" class="btn btn-warning mt-3"><a href="https://securepay.sslcommerz.com/gwprocess/v4/gw.php?Q=BKASH&SESSIONKEY=DFF6BD8AE10E98949DC1344F48030E21&ID=BGW70212022122938933">Proceed to Buy</a></button>
+                        <button type="submit" class="btn btn-warning mt-3"><a href="../t/payment page.php">Proceed to Buy</a></button>
                     </div>
                 </div>
             </div>
