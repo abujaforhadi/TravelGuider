@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2023 at 05:54 PM
+-- Generation Time: Dec 31, 2023 at 02:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -38,11 +38,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`user_id`, `user_name`, `password`) VALUES
-(1, 'j123', 'j123'),
-(2, 'jafor', 'jafor'),
-(3, 'ismail', 'ismail'),
-(2, 'jafor', 'jafor'),
-(3, 'ismail', 'ismail');
+(NULL, NULL, NULL),
+(NULL, NULL, NULL),
+(1, 'Admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -66,7 +64,141 @@ INSERT INTO `blog_table` (`topic_title`, `topic_date`, `name`, `image_filename`,
 ('Kaptai Lake', '2023-12-23', '', 'kap.jpg', 'One of the best artificial manmade lake in Bangladesh at Rangamati. Hire a boat and just tell your b'),
 ('Sajek Valley', '2023-12-22', '', 'sajek.jpg', 'Sajek is a union at Baghaichari Upazila in Rangamati districts.\r\nBut If you like to go there than you have to came Kahgrachori first and than you have to hire jeep to go there ..'),
 ('Patenga Beach', '2023-12-25', '', 'pot.jpg', 'It’s a very scenic beach @ the end of Chattogram city. Very good road communication . There is huge infrastructure going on with the beach. Lots of entertainment facilities are there includes street vendors with their mouth watering food.'),
-('Ahsan Manzil', '2023-12-15', '', '1-ahsan-manzil.jpg', 'Visited this place as I was in Dhaka, ashan manzil is very famous in Dhaka, view of the river buri Ganga.');
+('Ahsan Manzil', '2023-12-15', '', '1-ahsan-manzil.jpg', 'Visited this place as I was in Dhaka, ashan manzil is very famous in Dhaka, view of the river buri Ganga.'),
+('Padma Bridge Mawa', '2023-12-22', '', 'podma.jpeg', 'The largest bridge South Asia is located in Munshiganj, Dhaka, Bangladesh.'),
+('Jaflong', '2023-12-24', '', 'download (1).jpeg', 'AAA sSSSSS');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bus_details`
+--
+
+CREATE TABLE `bus_details` (
+  `bus_name` text NOT NULL,
+  `source` text NOT NULL,
+  `destination` text NOT NULL,
+  `fare` int(50) NOT NULL,
+  `seats_available` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bus_details`
+--
+
+INSERT INTO `bus_details` (`bus_name`, `source`, `destination`, `fare`, `seats_available`) VALUES
+('Saintmartin Hyundai 8:30am Volvo AC', 'Khagrachari', 'Dhaka', 1600, 9),
+('Hanif Enterprise 9:30pm Non AC', 'Khagrachari', 'Dhaka', 750, 10),
+('Saintmartin Hyundai 8:30pm Volvo AC', 'Khagrachari', 'Dhaka', 1600, 20),
+('Hanif Enterprise 2:30pm Non AC', 'Khagrachari', 'Dhaka', 750, 18),
+('Saintmartin Hyundai 8:30pm Volvo AC', 'Dhaka', 'Khagrachari', 1600, 15),
+('Hanif Enterprise 9:30pm Non AC', 'Dhaka', 'Khagrachari', 750, 10),
+('Saintmartin Hyundai 8:30pm Volvo AC', 'Dhaka', 'Khagrachari', 1600, 20),
+('Hanif Enterprise 2:30pm Non AC', 'Dhaka', 'Khagrachari', 750, 18),
+('Ena Transport (Pvt) Ltd 8:30pm Volvo AC', 'Dhaka', 'Khagrachari', 1600, 19),
+('Hanif Enterprise 9:30pm Non AC', 'Dhaka', 'Khagrachari', 750, 10),
+('Evergreen Transport Ltd 8:30pm Volvo AC', 'Dhaka', 'Khagrachari', 1600, 26),
+('Ena Transport (Pvt) Ltd 2:30pm Non AC', 'Dhaka', 'Khagrachari', 750, 20),
+('Ena Transport (Pvt) Ltd 8:30pm Volvo AC', 'Dhaka', 'CoxsBazar', 1800, 19),
+('Hanif Enterprise 9:30pm Non AC', 'Dhaka', 'CoxsBazar', 1100, 10),
+('Hanif Enterprise 11:30pm Volvo AC', 'Dhaka', 'CoxsBazar', 1600, 26),
+('Ena Transport (Pvt) Ltd 12:30pm Non AC', 'Dhaka', 'CoxsBazar', 1100, 20),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Dhaka', 'CoxsBazar', 1800, 19),
+('Hanif Enterprise 5:30pm Non AC', 'Dhaka', 'CoxsBazar', 1100, 10),
+('Evergreen Transport Ltd 8:30pm Volvo AC', 'Dhaka', 'CoxsBazar', 1600, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'Dhaka', 'CoxsBazar', 1100, 20),
+('Ena Transport (Pvt) Ltd 8:30pm Volvo AC', 'CoxsBazar', 'Dhaka', 1800, 19),
+('Hanif Enterprise 9:30pm Non AC', 'CoxsBazar', 'Dhaka', 1100, 10),
+('Hanif Enterprise 11:30pm Volvo AC', 'CoxsBazar', 'Dhaka', 1600, 26),
+('Ena Transport (Pvt) Ltd 12:30pm Non AC', 'CoxsBazar', 'Dhaka', 1100, 20),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'CoxsBazar', 'Dhaka', 1800, 19),
+('Hanif Enterprise 5:30pm Non AC', 'CoxsBazar', 'Dhaka', 1100, 10),
+('Evergreen Transport Ltd 8:30pm Volvo AC', 'Dhaka', 'CoxsBazar', 1600, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'CoxsBazar', 'Dhaka', 1100, 20),
+('Soudia Coach Service 8:30pm Volvo AC', 'Chittagong', 'Dhaka', 900, 25),
+('Hanif Enterprise 9:30pm Non AC', 'Chittagong', 'Dhaka', 750, 9),
+('Hanif Enterprise 11:30pm Volvo AC', 'Chittagong', 'Dhaka', 1200, 6),
+('Ena Transport (Pvt) Ltd 12:30pm Non AC', 'Chittagong', 'Dhaka', 1000, 20),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Chittagong', 'Dhaka', 780, 19),
+('Hanif Enterprise 5:30pm Non AC', 'Chittagong', 'Dhaka', 850, 10),
+('Saintmartin Travels 8:30pm Volvo AC', 'Dhaka', 'Chittagong', 1400, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'Chittagong', 'Dhaka', 800, 20),
+('Soudia Coach Service 8:30pm Volvo AC', 'Chittagong', 'Dhaka', 900, 25),
+('Hanif Enterprise 9:30pm Non AC', 'Chittagong', 'Dhaka', 750, 9),
+('Hanif Enterprise 11:30pm Volvo AC', 'Chittagong', 'Dhaka', 1200, 6),
+('Ena Transport (Pvt) Ltd 12:30pm Non AC', 'Chittagong', 'Dhaka', 1000, 20),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Chittagong', 'Dhaka', 780, 19),
+('Hanif Enterprise 5:30pm Non AC', 'Chittagong', 'Dhaka', 850, 10),
+('Saintmartin Travels 8:30pm Volvo AC', 'Dhaka', 'Chittagong', 1400, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'Chittagong', 'Dhaka', 800, 20),
+('Soudia Coach Service 8:30pm Volvo AC', 'Rangpur', 'Dhaka', 900, 25),
+('Hanif Enterprise 9:30pm Non AC', 'Chittagong', 'CoxsBazar', 350, 15),
+('Hanif Enterprise 11:30pm Non AC', 'Chittagong', 'Rangpur', 1200, 6),
+('Ena Transport (Pvt) Ltd 12:30pm Non AC', 'Chittagong', 'Dhaka', 1000, 20),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Chittagong', 'Dhaka', 780, 10),
+('Hanif Enterprise 5:30pm Non AC', 'Rangpur', 'Dhaka', 850, 30),
+('Ena Transport (Pvt) Ltd 6:30pm Volvo AC', 'Sylhet', 'Rangpur', 900, 29),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Chittagong', 'Dhaka', 780, 19),
+('Saintmartin Travels 8:30pm Volvo AC', 'Rangpur', 'Chittagong', 1400, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'CoxsBazar', 'Chittagong', 300, 20),
+('Hanif Enterprise 9:30pm Non AC', 'Rangpur', 'CoxsBazar', 1600, 15),
+('Hanif Enterprise 8:30pm Non AC', 'Rangpur', 'Sylhet', 900, 25),
+('Soudia Coach Service 8:30pm Volvo AC', 'Rangpur', 'Rajshahi', 250, 25),
+('Hanif Enterprise 9:30pm Non AC', 'Rajshahi', 'CoxsBazar', 1700, 15),
+('Hanif Enterprise 11:30pm Non AC', 'Chittagong', 'Rajshahi', 1500, 6),
+('Tungipara Express 12:30pm Non AC', 'Rajshahi', 'Dhaka', 900, 20),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Rajshahi', 'Dhaka', 1800, 10),
+('Hanif Enterprise 5:30pm Non AC', 'Rajshahi', 'Dhaka', 850, 30),
+('Ena Transport (Pvt) Ltd 6:30pm Volvo AC', 'Sylhet', 'Rajshahi', 900, 29),
+('Tungipara Express 11:30pm Volvo AC', 'Rajshahi', 'Chittagong', 780, 19),
+('Hanif Enterprise 8:30pm Non AC', 'Sylhet', 'Rajshahi', 1200, 25),
+('Tungipara Express 8:30pm Non AC', 'Rajshahi', 'Khulna', 450, 5),
+('Ena Transport (Pvt) Ltd 8:30pm Non AC', 'Rajshahi', 'Khulna', 450, 32),
+('Saintmartin Travels 8:30pm Volvo AC', 'Khulna', 'Chittagong', 1600, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'CoxsBazar', 'Khulna', 1300, 20),
+('Hanif Enterprise 9:30pm Non AC', 'Rangpur', 'CoxsBazar', 1600, 15),
+('Hanif Enterprise 8:30pm Non AC', 'Rajshahi', 'Sylhet', 1200, 25),
+('Soudia Coach Service 8:30pm Volvo AC', 'Dhaka', 'Rangamati', 870, 25),
+('Hanif Enterprise 9:30pm Non AC', 'Rajshahi', 'Rangamati', 1700, 15),
+('Hanif Enterprise 11:30pm AC', 'Dhaka', 'Rangamati', 1900, 25),
+('Hanif Enterprise 5:30pm Non AC', 'Rangamati', 'Dhaka', 900, 22),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Rajshahi', 'Dhaka', 1800, 10),
+('Hanif Enterprise 5:30pm Non AC', 'Dhaka', 'Rangamati', 850, 30),
+('Ena Transport (Pvt) Ltd 6:30pm Volvo AC', 'Rangamati', 'Rajshahi', 1400, 29),
+('Tungipara Express 11:30pm Volvo AC', 'Rangamati', 'Chittagong', 250, 19),
+('Hanif Enterprise 8:30pm Non AC', 'Sylhet', 'Rangamati', 1000, 20),
+('Hanif Enterprise 8:30am Non AC', 'Rangamati', 'Dhaka', 780, 15),
+('Ena Transport (Pvt) Ltd 8:30pm Non AC', 'Rajshahi', 'Rangamati', 450, 32),
+('Saintmartin Travels 8:30pm Volvo AC', 'Khulna', 'Chittagong', 1600, 26),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'CoxsBazar', 'Khulna', 1300, 20),
+('Hanif Enterprise 9:30pm Non AC', 'Rangamati', 'CoxsBazar', 1600, 15),
+('Hanif Enterprise 8:30pm Non AC', 'Rangamati', 'Sylhet', 1200, 25),
+('Soudia Coach Service 8:30pm Volvo AC', 'Dhaka', 'Rangamati', 870, 25),
+('Hanif Enterprise 9:00pm Non AC', 'Dhaka', 'Bogura', 500, 15),
+('Hanif Enterprise 11:30pm AC', 'Dhaka', 'Bogura', 1300, 25),
+('Hanif Enterprise 5:30pm Non AC', 'Bogura', 'Dhaka', 550, 22),
+('Ena Transport (Pvt) Ltd 11:30pm Volvo AC', 'Bogura', 'Dhaka', 1800, 19),
+('Hanif Enterprise 5:30pm Non AC', 'Bogura', 'Rangamati', 1350, 30),
+('Ena Transport (Pvt) Ltd 6:30pm Volvo AC', 'Bogura', 'Rajshahi', 200, 29),
+('SR 8:30am Volvo AC', 'Bogura', 'Dhaka', 1600, 15),
+('SR 9:30pm Non AC', 'Bogura', 'Dhaka', 550, 15),
+('SR 10:30pm Volvo AC', 'Bogura', 'Dhaka', 1300, 10),
+('SR 8:30am Non AC', 'Bogura', 'Dhaka', 600, 5),
+('SR 9:30pm Non AC', 'Bogura', 'Dhaka', 700, 25),
+('SR 10:30pm Volvo AC', 'Bogura', 'Dhaka', 1100, 3),
+('Ena Transport (Pvt) Ltd 6:30pm Volvo AC', 'Bogura', 'Rajshahi', 200, 29),
+('SR 8:30am Volvo AC', 'Dhaka', 'Bogura', 1600, 15),
+('Ena Transport (Pvt) Ltd 9:30pm Non AC', 'Dhaka', 'Bogura', 1600, 15),
+('SR 10:30pm Volvo AC', 'Dhaka', 'Bogura', 1300, 10),
+('SR 8:30am Non AC', 'Bogura', 'Dhaka', 700, 5),
+('Ena Transport (Pvt) Ltd 9:30pm Non AC', 'Dhaka', 'Bogura', 600, 25),
+('SR 10:30pm AC', 'Dhaka', 'Bogura', 900, 7),
+('Hanif Enterprise 8:30pm Non AC', 'Sylhet', 'Bogura', 1000, 20),
+('Hanif Enterprise 8:30am Non AC', 'Rangamati', 'Bogura', 780, 15),
+('Ena Transport (Pvt) Ltd 8:30pm Non AC', 'Rajshahi', 'Bogura', 250, 32),
+('Ena Transport (Pvt) Ltd 7:30pm Non AC', 'CoxsBazar', 'Bogura', 1300, 20),
+('Hanif Enterprise 9:30pm Non AC', 'Rangamati', 'Bogura', 1600, 15),
+('Hanif Enterprise 8:30pm Non AC', 'Bogura', 'Sylhet', 900, 25);
 
 -- --------------------------------------------------------
 
@@ -79,6 +211,13 @@ CREATE TABLE `cart` (
   `user_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `user_id`, `item_id`) VALUES
+(36, 1, 35);
 
 -- --------------------------------------------------------
 
@@ -156,7 +295,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `email`, `password`, `number`, `nid`, `address`, `verification_code`, `is_verify`) VALUES
+(5293, 'ismail', 'joy1@gmail.com', '@A1234567hf', '01310323085', 2147483647, 'West Shewrapara', 'fade4675', 0),
 (58157, 'jafor1', 'abuja2forhadi@gmail.com', 'a!ASSD32155', '01303744717', 2147483647, 'House-470/2/A,Flat # 6-B, Mirpur,Sher-E-Bangla Nag', '06b0acee', 0),
+(80373, 'Joy Pal', 'joy@gmail.com', '#12Abjoypal', '01310323085', 2147483647, 'West Shewrapara', '2d1dc7ae', 0),
 (95118, 'jafor', 'abujaforhadi1@gmail.com', '123', '203002048', 2147483647, 'House-470/2/A,Flat # 6-B, Mirpur,Sher-E-Bangla Nag', '839003e3ca2f194081968fc9c8de7a', 1);
 
 -- --------------------------------------------------------
@@ -210,7 +351,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `product`
