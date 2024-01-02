@@ -238,7 +238,7 @@ form
 
       <h1 style="margin-bottom: 10px; text-align: center;">Post Saved</h1>
 
-      <center><a style="color: dodgerblue;" href="index.php">Go to Home Page</a></center>
+      <center><a style="color: dodgerblue;" href="blog.php">Go to Home Page</a></center>
       
       <br><br>
 

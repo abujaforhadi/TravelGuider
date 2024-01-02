@@ -87,6 +87,26 @@ form
 
   padding: 5px 5px;
 }
+#name
+{
+  font-family: "Roboto", sans-serif;
+
+  outline: none;
+
+  border: 1.5px solid lightgrey;
+  
+  color: #333;
+
+  font-size: 12px;
+
+  width: 37.5%;
+
+  margin-bottom: 5px;
+
+  border-radius: 5px;
+
+  padding: 5px 5px;
+}
 
 #blogPara
 {
@@ -210,7 +230,7 @@ form
 
       if($conn->connect_error) die("Connection Error" . $conn->connect_error);
 
-      $sql = "select topic_title, topic_date,name, image_filename, topic_para from blog_table;";
+      $sql = "select topic_title, topic_date,name,duration,person,cost, image_filename, topic_para from blog_table;";
 
       $result = $conn->query($sql);
 
@@ -220,10 +240,14 @@ form
         {
           echo "<div style='padding: 25px 25px;' class='post-container'>";
 
-          echo "<span id='displayTitle'>" . $row["topic_title"] . "</span><br>";
+          echo "<span id='displayTitle'>Place name:" . $row["topic_title"] . "</span><br>";
 
-          echo "<span id='displayDate'>" . $row["topic_date"] . "</span><br><br>";
-          echo "<span id='displayTitle'>" . $row["name"] . "</span><br><br>";
+          echo "<span id='displayDate'>Travel Date:" . $row["topic_date"] . "</span><br>";
+         
+          echo "<span id='name'>Posted by: " . $row["name"] . "</span><br>";
+          echo "<span id='name'>Duration:" . $row["duration"] . " days</span><br>";
+          echo "<span id='name'>Total Tourist:" . $row["person"] . " Person</span><br>";
+          echo "<span id='name'>Total Cost:" . $row["cost"] . " Tk</span><br>";
 
           echo "<img style='width: 100%; height: auto' id='displayImage' src='./assets/blog/images/" . $row["image_filename"] . "'><br>"; 
 

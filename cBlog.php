@@ -200,7 +200,7 @@ form
   <br>
   
   Travel Date:<input id="blogDate" name="blogdate" type="date"required></input> <br> <br>
-  UserName:<input id="name" type="name" name="name" required> </input> <br>
+ <br>
 
   
   <br><br>
@@ -218,7 +218,7 @@ form
 
 <br>
 
-<center><a style="text-decoration: none;" href="index.php" id="saveBtn">Go to Home Page</a></center>
+<center><a style="text-decoration: none;" href="Blog.php" id="saveBtn">Go to Home Page</a></center>
 
 </div>
 
