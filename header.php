@@ -76,7 +76,7 @@ $user_data = check_login($con);
                         <a class="nav-link" href="#"><i class="fa-solid fa-house-medical-flag"></i> Medical</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-hotel"></i> Residence</a>
+                        <a class="nav-link" href="home.php"><i class="fa-solid fa-hotel"></i> Residence</a>
                     </li>
                     
                     <li class="nav-item active">
