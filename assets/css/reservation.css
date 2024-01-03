@@ -6,14 +6,7 @@
 }
 
 /* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: url('search-bg.jpg') center/cover no-repeat;
-    color: white;
-    background-size: cover;
-    position: relative;
-}
+
 
 
 h1 {

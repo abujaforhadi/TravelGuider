@@ -26,7 +26,7 @@ if (isset($_POST['cancel_booking'])) {
 
         if ($deleteResult) {
             // Update the availability_status to "available" for the associated home
-            $updateAvailabilityQuery = "UPDATE holiday_homes SET availability_status = 'available' WHERE home_id = $homeId";
+            $updateAvailabilityQuery = "UPDATE home SET availability_status = 'available' WHERE home_id = $homeId";
             $updateAvailabilityResult = $con->query($updateAvailabilityQuery);
 
             if ($updateAvailabilityResult) {

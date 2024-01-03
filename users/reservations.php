@@ -1,4 +1,11 @@
 <?php
+ob_start();
+
+
+include("../database/connection.php");
+include("../database/functions.php");?>
+
+<?php
 
 
 # database
@@ -13,9 +20,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 // Fetch reservations for the logged-in user
 $userId = $_SESSION['user_id'];
-$query = "SELECT reservations.*, holiday_homes.name, holiday_homes.image_path 
+$query = "SELECT reservations.*, home.name, home.image_path 
           FROM reservations 
-          INNER JOIN holiday_homes ON reservations.home_id = holiday_homes.home_id 
+          INNER JOIN home ON reservations.home_id = home.home_id 
           WHERE reservations.user_id = $userId";
 $result = $con->query($query);
 
@@ -33,7 +40,6 @@ if ($result && $result->num_rows > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reserve - HappyHolidayHome</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/reservation.css">
@@ -43,10 +49,8 @@ if ($result && $result->num_rows > 0) {
 
 <body>
     <!-- Nav Bar -->
-    <?php include("../inc/header.php"); ?>
 
-    <div class="container">
-        <h1 style="margin-top: 50px;">My Reservations</h1>
+    <div class="containe">
         <?php
         if (!empty($reservations)) {
             echo "<ul class='reservation-list'>";
@@ -73,7 +77,7 @@ if ($result && $result->num_rows > 0) {
     </div>
 
     <!-- Footer -->
-    <?php include("../inc/footer.php"); ?>
+    <?php include("../footer.php"); ?>
 </body>
 
 </html>

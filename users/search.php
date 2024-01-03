@@ -19,7 +19,7 @@ if (isset($_GET['location'], $_GET['checkIn'], $_GET['checkOut'])) {
     $checkOut = $_GET['checkOut'];
 
     // Construct the query
-    $query = "SELECT * FROM holiday_homes WHERE location LIKE '%$location%' AND availability_status = 'available'";
+    $query = "SELECT * FROM home WHERE location LIKE '%$location%' AND availability_status = 'available'";
     $result = $con->query($query);
 
     if (!$result) {
@@ -55,7 +55,6 @@ if (isset($_GET['location'], $_GET['checkIn'], $_GET['checkOut'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Search Results - HappyHolidayHome</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   

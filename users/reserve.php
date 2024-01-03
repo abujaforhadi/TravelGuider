@@ -14,7 +14,7 @@ if (isset($_GET['home_id'])) {
     $homeId = $_GET['home_id'];
 
     // Fetch selected home's information
-    $query = "SELECT * FROM holiday_homes WHERE home_id = $homeId";
+    $query = "SELECT * FROM home WHERE home_id = $homeId";
     $result = $con->query($query);
 
     if ($result && $result->num_rows > 0) {
@@ -44,7 +44,7 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
             $reservationError = "Check-in date cannot be greater than the check-out date.";
         } else {
             // Calculate total price based on selected home's price and booking duration
-            $query = "SELECT price FROM holiday_homes WHERE home_id = $homeId";
+            $query = "SELECT price FROM home WHERE home_id = $homeId";
             $result = $con->query($query);
 
             if ($result && $result->num_rows > 0) {
@@ -63,7 +63,7 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
                     $reservationSuccess = true;
 
                     // Update the availability_status to "not_available"
-                    $updateAvailabilityQuery = "UPDATE holiday_homes SET availability_status = 'not_available' WHERE home_id = $homeId";
+                    $updateAvailabilityQuery = "UPDATE home SET availability_status = 'not_available' WHERE home_id = $homeId";
                     $updateAvailabilityResult = $con->query($updateAvailabilityQuery);
 
                     if (!$updateAvailabilityResult) {
@@ -71,7 +71,6 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
                         $reservationError = "Error updating availability status: " . $con->error;
                     } else {
                         // Redirect to reservations.php after successful reservation
-                        header("Location: reservations.php");
                     }
                 } else {
                     $reservationError = "Error creating reservation: " . $con->error;
@@ -91,14 +90,13 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reserve - HappyHolidayHome</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/reserve.css">
+  
+    <link rel="stylesheet" href="../assets/css/searches.css">
    
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-
 <body>
     <!-- Nav Bar -->
 
