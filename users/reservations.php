@@ -2,8 +2,8 @@
 ob_start();
 
 
-include("../database/connection.php");
-include("../database/functions.php");?>
+include("../header.php");
+
 
 <?php
 

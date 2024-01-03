@@ -134,9 +134,12 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
             if (isset($reservationError)) {
                 echo "<p class='error' style='font-weight: bold'>$reservationError</p>";
             }
+            function hello() {
+                echo "Successfully Reserved!";
+            }
 
-            echo "<button type='submit' class='btn'>Reserve Now</button>";
-            echo "<button type='reset' class='btn'>Reset</button>";
+            echo "<button onclick= hello(); type='submit' class='btn'>Reserve Now</button>";
+            echo "<button  type='reset' class='btn' >Reset</button>";
             echo "</form>";
         } elseif ($reservationError) {
             echo "<p class='error'>$reservationError</p>";
@@ -145,7 +148,8 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
         }
         ?>
     </div>
-
+    
+  
     <!-- Footer -->
     <?php include("../footer.php"); ?>
 </body>

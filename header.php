@@ -57,31 +57,31 @@ $user_data = check_login($con);
 
         <!-- Primary Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
-            <a class="navbar-brand" href="index.php"> Travel Guider</a>
+            <a class="navbar-brand" href="./index.php"> Travel Guider</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto font-rubik">
                     <li class="nav-item active">
-                        <a class="nav-link" href="topPlace.php"><i class="fa-solid fa-location-dot"></i> Tour Places</a></a>
+                        <a class="nav-link" href="./topPlace.php"><i class="fa-solid fa-location-dot"></i> Tour Places</a></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="landing_page.php"><i class="fa-solid fa-van-shuttle"></i>Transportation</a>
+                        <a class="nav-link" href="./landing_page.php"><i class="fa-solid fa-van-shuttle"></i>Transportation</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="blog.php"><i class="fa-solid fa-blog"></i> Blog & Reviews</a>
+                        <a class="nav-link" href="./blog.php"><i class="fa-solid fa-blog"></i> Blog & Reviews</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#"><i class="fa-solid fa-house-medical-flag"></i> Medical</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="home.php"><i class="fa-solid fa-hotel"></i> Residence</a>
+                        <a class="nav-link" href="./home.php"><i class="fa-solid fa-hotel"></i> Residence</a>
                     </li>
                     
                     <li class="nav-item active">
                         
-                        <a class="nav-link" href="logout.php"><i class="fa-solid fa-user-plus"></i><?php echo $user_data['user_name']; ?> (Logout)</a></a>
+                        <a class="nav-link" href="./logout.php"><i class="fa-solid fa-user-plus"></i><?php echo $user_data['user_name']; ?> (Logout)</a></a>
                     </li>
                     
                 </ul>
