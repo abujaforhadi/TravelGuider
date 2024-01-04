@@ -20,7 +20,7 @@ include("Template/_admin.php");
   }
 </style>
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'shopee');
+$conn = mysqli_connect('localhost', 'root', '', 'travel');
 
 if(isset($_POST["submit1"])){
     $sql = "INSERT INTO product(item_id, item_brand, item_name, item_price, item_image, item_register)
@@ -105,7 +105,7 @@ if($conn->query($sql)===true){
 
     </tr>
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "shopee");
+    $conn = mysqli_connect("localhost", "root", "", "travel");
 
 
 $sql = "SELECT item_id, item_brand, item_name, item_price, item_image, item_register FROM product";

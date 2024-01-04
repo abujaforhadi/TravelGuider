@@ -20,7 +20,7 @@ include("_admin.php");
   }
 </style>
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'shopee');
+$conn = mysqli_connect('localhost', 'root', '', 'travel');
 $filename = "NONE";
 
 if(isset($_FILES['uploadimage']))
@@ -110,7 +110,7 @@ if($conn->query($sql)===true){
 
     </tr>
 <?php
-    $conn = mysqli_connect("localhost", "root", "", "shopee");
+    $conn = mysqli_connect("localhost", "root", "", "travel");
 
 
 $sql = "SELECT * FROM blog_table";

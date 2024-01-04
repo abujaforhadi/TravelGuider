@@ -177,7 +177,7 @@ include('header.php');
             $_SESSION["to"] = $_POST['to_name'];
             $_SESSION["dt"] = $_POST['date_name'];
 
-            $db = mysqli_connect('localhost', 'root', '', 'shopee') or die("Could not connect to Database");
+            $db = mysqli_connect('localhost', 'root', '', 'travel') or die("Could not connect to Database");
 
             $querry = "SELECT * FROM bus_details WHERE source='$frm' AND destination='$to'";
 

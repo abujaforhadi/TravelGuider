@@ -3,7 +3,7 @@ ob_start();
 
 
 include("../header.php");
-
+?>
 
 <?php
 

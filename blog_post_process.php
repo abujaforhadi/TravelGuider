@@ -10,7 +10,7 @@
 
  $password = "";
 
- $database = "shopee";
+ $database = "travel";
 
  $conn = new mysqli($servername, $username, $password, $database);
 
