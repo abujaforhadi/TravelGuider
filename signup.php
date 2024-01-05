@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <br>
 
 
-          <div style="font-size: 15px;color: gray;text-align: center;">Have an account? </div>
+          <div style="font-size: 15px;color: white;text-align: center;">Have an account? </div>
 
             <div class="btn">
 
