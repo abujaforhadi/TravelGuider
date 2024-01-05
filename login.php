@@ -72,7 +72,7 @@ session_start();
 	<style type="text/css">
         body {
     min-height: 100vh;
-    background: url('./assets/background.jpg') ;
+    background: url(https://wallpaperaccess.com/full/2102379.jpg) ;
     background-size: cover;
     background-position: center;
 }
@@ -125,7 +125,7 @@ session_start();
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: gray;">Login</div>
+			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
 			<input id="text" type="text" name="user_name"placeholder="User name" required><br><br>
 			<input id="text" type="password" name="password" placeholder="Password" requiredy><br><br>
@@ -139,7 +139,7 @@ session_start();
                 <input  type="submit" value="Login">
               </a>
             </div><br>
-			<div style="font-size: 15px;text-align: center;color: gray;">Don't have an account? </div>
+			<div style="font-size: 15px;text-align: center;color: white;">Don't have an account? </div>
 
 			<div class="btn">
 			  <a href="signup.php">

@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <style>
         body {
     min-height: 100vh;
-    background: url('./assets/background.jpg') ;
+    background: url(https://live.staticflickr.com/2738/4195504888_edb9cc9fb6_b.jpg) ;
     background-size: cover;
     background-position: center;
 }
