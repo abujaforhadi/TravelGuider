@@ -3,48 +3,6 @@ session_start();
 
 include("database/connection.php");
 include("database/functions.php");
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-
-function sendMail($email,$v_code){
-
-    require ("PHPMailer/PHPMailer.php");
-    require ("PHPMailer/SMTP.php");
-    require ("PHPMailer/Exception.php");
-    
-    //Create an instance; passing `true` enables exceptions
-    $mail = new PHPMailer(true);
-    
-    try {
-        //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'Teaminfinity.bd.2020@gmail.com';                     //SMTP username
-        $mail->Password   = 'J@f0r321321';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    
-        //Recipients
-        $mail->setFrom('Teaminfinity.bd.2020@gmail.com', 'Travel Guider');
-  
-        $mail->addAddress($email);               //Name is optional
-           
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Travel Guider Email verification';
-        $mail->Body    = "Thanks for registration
-        click the link to verify the email address 
-        <a href='http://localhost/t/verify.php?email=$email&v_code=$v_code'>verify</a>";
-        $mail->send();
-        return true;
-       
-    } catch (Exception $e) {
-       return false ;
-    } 
-}
 
 
 
@@ -69,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
          $query = "INSERT INTO `users`(`user_id`, `user_name`, `email`, `password`, `number`, `nid`, `address`, `verification_code`, `is_verify`) values ('$user_id','$user_name','$email','$password','$number','$nid','$address','$v_code','0')";
  
          mysqli_query($con, $query);
-          sendMail($email,$v_code);
              header("Location: login.php");
              die;
         
