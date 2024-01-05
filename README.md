@@ -12,5 +12,4 @@
 ![bus2](https://github.com/abujaforhadi/TravelGuider/assets/79355299/d9341ded-0bfc-40b9-9291-267c9eafe31e)
 ![blog](https://github.com/abujaforhadi/TravelGuider/assets/79355299/137835c4-2d9c-4eff-9e5a-439ed3126c7f)
 ![blog 2](https://github.com/abujaforhadi/TravelGuider/assets/79355299/10eb1387-84f3-4862-9a21-663716661431)
-![payment](https://github.com/abujaforhadi/TravelGuider/assets/79355299/14a16ff4-31ce-4036-8cd6-355ae70fa726)
-
+![payment](https://github.com/abujaforhadi/TravelGuider/assets/79355299/a5fb41ca-e42d-4052-bcfc-c717b045b8b4)
