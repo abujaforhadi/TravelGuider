@@ -4,15 +4,7 @@
     include ('header.php');
 ?>
 <?php
- $servername = "localhost";
 
- $username = "root";
-
- $password = "";
-
- $database = "travel";
-
- $conn = new mysqli($servername, $username, $password, $database);
 
 
 
@@ -39,17 +31,7 @@ if(isset($_FILES['uploadimage']))
 
 $sql = "INSERT INTO blog_table (topic_title, topic_date, name, image_filename,topic_para) values ('" . $blogTitle . "', '$blogDate','', '" . $filename . "', '" . $blogPara . "');";
 
-if($conn->query($sql) === TRUE)
-{
-  echo "";
-}
 
-else
-{
-  echo "Error Saving Post";
-}
-
-$conn->close();
 
 ?>
 

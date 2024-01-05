@@ -16,6 +16,14 @@ include('header.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
  
     <link rel="stylesheet" href="assets/css/index.css">
+    <style type="text/css">
+        .containe
+{
+  margin: 0;
+  background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/city-buildings_1DTBN8IHGL.jpg);
+  word-wrap: break-word;
+}
+</style>
 
 
 

@@ -61,7 +61,7 @@ if ($result && $result->num_rows > 0) {
                 echo "<p><strong>Home:</strong> {$reservation['name']}</p>";
                 echo "<p><strong>Check-in:</strong> {$reservation['check_in_date']}</p>";
                 echo "<p><strong>Check-out:</strong> {$reservation['check_out_date']}</p>";
-                echo "<p><strong>Total Price:</strong> ₹{$reservation['total_price']}</p>";
+                echo "<p><strong>Total Price:</strong> {$reservation['total_price']} TK</p>";
                 echo "<form method='post' action='cancel_booking.php'>";
                 echo "<input type='hidden' name='reservation_id' value='{$reservation['reservation_id']}'>";
                 echo "<button type='submit' class='cancel-button' name='cancel_booking'>Cancel Booking</button>";

@@ -1,3 +1,9 @@
+
+<?php
+ob_start();
+
+include('header.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Gateway</title>
-    <!-- <link rel="stylesheet" href="harry2.css"> -->
     <style>
+       
         * {
             margin: 0%;
             padding: 0%;
@@ -24,7 +30,7 @@
 
 
         h2 {
-            background-color: black;
+            background-color: 1px solid black;
             opacity: 0.6;
             height: 105px;
             display: flex;
@@ -35,7 +41,7 @@
         }
 
         .mainhead {
-            color: wheat;
+            color: black;
             font-size: 35px;
             width: 51%;
             margin: auto;
@@ -73,7 +79,6 @@
 <body>
 
     <?php
-    session_start();
     $_SESSION['no'] = $_POST["num_name"];
     $a = 1;
     while ($a <= $_POST["num_name"]) {
@@ -140,7 +145,7 @@
 
 
     <div>
-        <h2 class="mainhead"><b><u>Payment Form</u></b></h2>
+        <h2 class="mainhead"><b>Payment Form</b></h2>
 
 
 
@@ -205,3 +210,6 @@
 </body>
 
 </html>
+<?php
+include ('footer.php');
+?>

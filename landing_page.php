@@ -18,8 +18,10 @@ include('header.php');
     <link href="http://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <!-- <link rel="stylesheet" href="landing page.css"> -->
     <style>
+        body{
+            background-image: url("https://trumpwallpapers.com/wp-content/uploads/Bus-Wallpaper-20-1920x1080-1.jpg") ;
+        }
         h1 {
             background-color: black;
             opacity: 0.6;
@@ -43,6 +45,7 @@ include('header.php');
             margin: 100px auto;
             font-size: 20px;
             border: 1px solid red;
+            color: white;
 
         }
 
@@ -92,6 +95,7 @@ include('header.php');
             margin-bottom: 25px;
             position: relative;
             top: -58px;
+            background-color: white;
         }
 
         th {
@@ -167,7 +171,7 @@ include('header.php');
 
 
     <br><br>
-    <form action="passenger info.php" method="post" class="secondform">
+    <form action="passenger info.php" method="post" class="secondform" >
         <?php
         if (isset($_POST['submit'])) {
             $frm = $_POST['src_name'];

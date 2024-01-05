@@ -19,7 +19,7 @@
         body
 {
   margin: 0;
-
+background-image: url(https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   word-wrap: break-word;
 }
 
@@ -199,11 +199,17 @@ form
   
   <br>
   
-  Travel Date:<input id="blogDate" name="blogdate" type="date"required></input> <br> <br>
+  Travel Date:<input id="blogDate" name="blogdate" type="date"required></input> <br>
  <br>
-
+ <input id="blogTitle" name="duration" type="text" placeholder="Duration" autocomplete="off"required>
   
-  <br><br>
+  <br>
+  <input id="blogTitle" name="person" type="text" placeholder="Total Tourist" autocomplete="off"required>
+  
+  <br>
+  <input id="blogTitle" name="cost" type="text" placeholder="Total cost" autocomplete="off"required>
+  
+  <br>
   
   <input type="file" name="uploadimage" required>
   

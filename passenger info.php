@@ -12,11 +12,11 @@ include('header.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>passengers Info</title>
-    <link rel="stylesheet" href="sign-up.css">
     <style>
         .cont {
   max-width: 500px;
   margin: auto;
+  color: white;
 }
 
     </style>
@@ -25,7 +25,7 @@ include('header.php');
 
 </head>
 
-<body  style="background-color:#EDE2DF">
+<body  style="background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/water-splash_BDJ2UJD7EZ.jpg);">
 
     <div class="cont">
     <h1>
@@ -42,25 +42,15 @@ include('header.php');
             $h = $_POST['radio_name'];
             $e = $_POST['fair_name'];
             print("From: " . $a);
-            print("<br>");
-            print("<br>");
-            print("<br>");
-            print("To: " . $b);
-            print("<br>");
-            print("<br>");
+            print("<br>");           
+            print("To: " . $b);           
             print("<br>");
             print("Date: " . $c);
-            print("<br>");
-            print("<br>");
-            print("<br>");
+            print("<br>");           
             print("Bus Name: " . $h);
-            print("<br>");
-            print("<br>");
-            print("<br>");
+            print("<br>");           
             print("Bus Fare: " . $e);
-            print("<br>");
-            print("<br>");
-            
+            print("<br>");            
             $_SESSION["fph"] = $_POST['fair_name'];
             $_SESSION["bsnm"] = $_POST['radio_name'];
             ?>

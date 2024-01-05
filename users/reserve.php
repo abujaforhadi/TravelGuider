@@ -115,12 +115,13 @@ if (isset($_POST['home_id'], $_POST['checkIn'], $_POST['checkOut'])) {
 
             echo "<p class='label'>Ratings:</p>";
             echo "<p>{$selectedHome['rating']}</p>";
+            
 
 
             echo "</div>";
             echo "</div>";
 
-            echo "<p class='success'>Please Fill Up The Following Information!</p>";
+
 
             // Reservation form
             echo "<form method='post' action=''>";
