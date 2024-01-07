@@ -20,8 +20,13 @@ include('header.php');
         .containe
 {
   margin: 0;
-  background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/city-buildings_1DTBN8IHGL.jpg);
   word-wrap: break-word;
+}
+body {
+    min-height: 100vh;
+    background: url(https://digital.ihg.com/is/image/ihg/intercontinental-dhaka-6829083857-4x3) ;
+    background-size: cover;
+    background-position: center;
 }
 </style>
 

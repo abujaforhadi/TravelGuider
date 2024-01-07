@@ -25,7 +25,10 @@ include('header.php');
 
 </head>
 
-<body  style="background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/water-splash_BDJ2UJD7EZ.jpg);">
+<body  style="background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/water-splash_BDJ2UJD7EZ.jpg);  min-height: 100vh;
+    
+    background-size: cover;
+    background-position: center;">
 
     <div class="cont">
     <h1>
