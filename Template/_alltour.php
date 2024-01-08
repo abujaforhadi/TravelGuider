@@ -11,14 +11,14 @@
                 <img src="<?php echo $item['item_image'] ?? "./assets/products/1.png" ?>" alt="product" class="img-fluid">
                 <div class="form-row pt-4 font-size-16 font-baloo">
                     <div class="col">
-                        <button type="submit" class="btn btn-danger form-control">Proceed to Buy</button>
+                        <button type="submit" action="./payment page.php" class="btn btn-danger form-control">Proceed to Buy</button>
                     </div>
                     <div class="col">
                         <?php
                         if (in_array($item['item_id'], $Cart->getCartId($product->getData('cart')) ?? [])){
                             echo '<button type="submit" disabled class="btn btn-success font-size-16 form-control">In the Cart</button>';
                         }else{
-                            echo '<button type="submit" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Book Now</button>';
+                            echo '<button type="submit" action="./payment.php" name="top_sale_submit" class="btn btn-warning font-size-16 form-control">Book Now</button>';
                         }
                         ?>
                     </div>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-sm-6 py-5">
                 <h5 class="font-baloo font-size-20"><?php echo $item['item_name'] ?? "Unknown"; ?></h5>
-                <small>by <?php echo $item['item_brand'] ?? "Brand"; ?></small>
+                <small>At  <?php echo $item['item_brand'] ?? "Brand"; ?> Division</small>
                 <div class="d-flex">
                     <div class="rating text-warning font-size-12">
                         <span><i class="fas fa-star"></i></span>
@@ -44,7 +44,7 @@
                     
                     <tr class="font-rale font-size-14">
                         <td>Deal Price:</td>
-                        <td class="font-size-20 text-danger">৳<span><?php echo $item['item_price'] ?? 0; ?></span><small class="text-dark font-size-12">&nbsp;&nbsp;Inclusive of all taxes</small></td>
+                        <td class="font-size-20 text-danger">৳<span><?php echo $item['item_price'] ?? 0; ?></span><small class="text-dark font-size-12">&nbsp;&nbsp;</small></td>
                     </tr>
                     
                 </table>
